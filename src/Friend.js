@@ -21,6 +21,8 @@ export function Friend({ friend, onSelection, selectedFriend }) {
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
 
       <ButtonComponent onClickprop={() => onSelection(friend)}>{isSelected ? "Close" : "Select"}</ButtonComponent>
+
+      {/*<ButtonComponent onClickprop={    onSelection(friend)}>....................................</ButtonComponent> */}
     </li>
   );
 }

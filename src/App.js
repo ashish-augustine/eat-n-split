@@ -24,7 +24,6 @@ const initialFriends = [
     balance: 0,
   },
 ];
-
 export default function App() {
   const [friends, setFriends] = useState(initialFriends);
   const [showAddFriend, setShowAddFriend] = useState(false);
@@ -55,12 +54,12 @@ export default function App() {
   return (
     <div className="app">
       <div className="sidebar">
-        {/** Left side bar*/}
+        {/*         LHS        */}
         <FriendsList friends={friends} selectedFriend={selectedFriend} onSelection={handleSelection} />
         {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
         <ButtonComponent onClickprop={handleShowAddFriend}>{showAddFriend ? "Close" : "Add friend"}</ButtonComponent>
       </div>
-      {/** Right side bar*/}
+      {/*          RHS         */}
       {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill} key={selectedFriend.id} />}
     </div>
   );
